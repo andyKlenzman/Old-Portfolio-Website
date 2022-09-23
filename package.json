@@ -1,0 +1,22 @@
+{
+  "name": "2-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles.scss styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "node-sass": "^7.0.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.54.9"
+  }
+}
