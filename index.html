@@ -1,59 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- gitignore has node modules missing....will that be a prob during deplay? -->
+  <!-- gitignore has node modules missing....will that be a prob during deplay? -->
 
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NuCamp: A Better Way To Camp</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
+  <!-- make the viewport height the height og the landing page container -->
 
-<body class="">
+  <body class="">
     <!-- what if I animated the dash to become an underline????? -->
+    <!-- model the color scheme after linkedTree, use black and white for first intro section, and for each project, add a special section -->
     <!-- add a blur to the header -->
 
-    <header class="m_header_container ">
-        <a class="m_header_font">HOME /</a>
-        <a class="m_header_font">PORTFOLIO /</a>
-        <a class="m_header_font">CONTACT /</a>
-        <a class="m_header_font">LINKEDIN /</a>
-        <a class="m_header_font">GITHUB /</a>
-        <a class="m_header_font">CV</a>
+    <header class="m_header_container navbar">
+      <a class="m_header_font">HOME /</a>
+      <a class="m_header_font" href="#anchor-name">PORTFOLIO /</a>
+      <a class="m_header_font">TIMELINE /</a>
+      <a class="m_header_font">CONTACT</a>
+      <!-- <a class="m_header_font">/</a>
+      <a class="m_header_font"></a> -->
     </header>
-    
+
     <!-- MENU -->
-    <div class="m_landing_page">
-        <!-- <pre id="grid"> -->
-            <div class="scanlines">
-                <h1>Andy Klenzman</h1>
-                
-                <h2>&#60;Full Stack Developer/&#62;</h2>
-                <!-- <div id="grid-bg"></div> -->
-                <!-- <div id="grid-content"></div> -->
-            </div>
-            
-        <!-- </pre> -->
+    <div class="m_landing_page scanlines">
+      <!-- <pre id="grid"> -->
+
+      <div class="">
+        <h1>Andy Klenzman</h1>
+
+        <h2>&#60;Full Stack Developer/&#62;</h2>
+        <a href="#anchor-name"
+          ><button class="m_main_button">
+            <h6 class="m_main_button_text">VIEW PORTFOLIO</h6>
+          </button>
+        </a>
+        <!-- <div id="grid-bg"></div> -->
+        <!-- <div id="grid-content"></div> -->
+      </div>
+
+      <!-- </pre> -->
     </div>
 
+    <div id="anchor-name" class="container m_portfolio">
+      <div class="row">
 
+        <!-- NEW CARD -->
+        <div class="card col-lg-6 p-0">
+          <div class="relative">
+            <img
+              class="card-img"
+              src="/Portfolio_Project/img/tshareMultiple.png"
+            />
+          </div>
+         
+          <div class="lg_banner" id="lgbanner1">
+            <h1 class="lg_background_banner text-center">
+              My first full stack project
+            </h1>
+            <h1 class="lg_foreground_banner">My first full stack project</h1>
+          </div>
 
+          <div class="banner" id="smbanner1">
+            <h1 class="background_banner">Wear the Internet</h1>
+            <h1 class="foreground_banner">Wear the Internet</h1>
+            
+          </div>
 
-    <footer>
-      
+          <div class="selection_banner" id="project1" sm-banner-id="smbanner1" lg-banner-id="lgbanner1">
+          </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-lg-6 m-3">Pet Rainbow</div>
+      <div class="card col-lg-6 m-3">Data Science</div>
+      <div class="card col-lg-6 m-3">INTRO</div>
+    
+
+    <footer class="m_footer">
+      <h4>Want to build something awesome?</h4>
+      <h5><i class="fa fa-envelope"></i> andyklenz@gmail.com</h5>
     </footer>
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/animation.js"></script>
+    <!-- jquery practice and librayr -->
+    <script>
 
-</body>
+      $(function(){
 
+
+        $('.selection_banner').on('mouseover', function() {
+            var smID = $(this).attr('sm-banner-id')
+            var lgID = $(this).attr('lg-banner-id')
+        
+           $('#'+smID).slideToggle(100)
+            $('#'+lgID).animate({
+              opacity:1
+            },100)
+
+          }
+
+          )
+          $('.selection_banner').on('mouseleave', function() {
+            var smID = $(this).attr('sm-banner-id')
+            var lgID = $(this).attr('lg-banner-id')
+        
+           $('#'+smID).slideToggle(100)
+            $('#'+lgID).animate({
+              opacity:0
+            },100)
+
+          }
+
+          )
+
+
+        
+          
+          
+
+          
+          
+          
+         } );
+
+
+    </script>
+  </body>
 </html>
