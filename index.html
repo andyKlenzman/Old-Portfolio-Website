@@ -41,13 +41,15 @@
     </header>
 
     <!-- MENU -->
-    <div class="m_landing_page scanlines">
+    <div class="m_landing_page">
       <!-- <pre id="grid"> -->
 
-      <div class="">
-        <h1>Andy Klenzman</h1>
-
-        <h2>&#60;Full Stack Developer/&#62;</h2>
+      <div class="main_content_wrapper">
+        <div class="wrapper">
+          <h1 class="main_background_banner">Andy Klenzman</h1>
+          <h1 class="main_foreground_banner">Andy Klenzman</h1>
+        </div>
+          <h2 class="main_foreground_banner">&#60;Full Stack Developer/&#62;</h2>
         <a href="#anchor-name"
           ><button class="m_main_button">
             <h6 class="m_main_button_text">VIEW PORTFOLIO</h6>
@@ -60,42 +62,106 @@
       <!-- </pre> -->
     </div>
 
-    <div id="anchor-name" class="container m_portfolio">
+    <div id="anchor-name" class="container">
       <div class="row">
-
         <!-- NEW CARD -->
-        <div class="card col-lg-6 p-0">
+        <div class="col-lg-6">
+          <div class="card border-0 shadow ">
+            <div class="relative">
+              <img
+                class="card-img"
+                src="/Portfolio_Project/img/tshareMultiple.png"
+              />
+            </div>
+            <div class="lg_banner" id="lgbanner1">
+              <div class="lg_text_banner">
+                <div class="description_title_wrapper">
+                  <p class="lg_background_banner text-center">T share</p>
+                  <p class="lg_foreground_banner">T share</p>
+                </div>
+                <div class="wrapper_subtitle">
+                  <p class="lg_background_banner text-center">
+                    The best QR code on a planet on a t-shirt
+                  </p>
+                  <p class="lg_foreground_banner">
+                    The best QR code on a planet on a t-shirt
+                  </p>
+                </div>
+                <div class="wrapper_plus">
+                  <p class="lg_background_banner text-center">+</p>
+                  <p class="lg_foreground_banner">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="banner slant" id="smbanner1">
+              <div class="banner_text_wrap">
+                <p class="background_banner">Wear the Internet</p>
+                <p class="foreground_banner">Wear the Internet</p>
+              </div>
+            </div>
+            <div
+              class="selection_banner"
+              id="project1"
+              sm-banner-id="smbanner1"
+              lg-banner-id="lgbanner1"
+            ></div>
+          </div>
+        </div>
+      
+
+      <!-- new card -->
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow">
           <div class="relative">
             <img
               class="card-img"
               src="/Portfolio_Project/img/tshareMultiple.png"
             />
           </div>
-         
-          <div class="lg_banner" id="lgbanner1">
-            <h1 class="lg_background_banner text-center">
-              My first full stack project
-            </h1>
-            <h1 class="lg_foreground_banner">My first full stack project</h1>
+          <div class="lg_banner" id="lgbanner2">
+            <div class="lg_text_banner">
+              <div class="description_title_wrapper">
+                <p class="lg_background_banner text-center">T share</p>
+                <p class="lg_foreground_banner">T share</p>
+              </div>
+              <div class="wrapper_subtitle">
+                <p class="lg_background_banner text-center">
+                  The best QR code on a planet on a t-shirt
+                </p>
+                <p class="lg_foreground_banner">
+                  The best QR code on a planet on a t-shirt
+                </p>
+              </div>
+              <div class="wrapper_plus">
+                <p class="lg_background_banner text-center">+</p>
+                <p class="lg_foreground_banner">+</p>
+              </div>
+            </div>
           </div>
-
-          <div class="banner" id="smbanner1">
-            <h1 class="background_banner">Wear the Internet</h1>
-            <h1 class="foreground_banner">Wear the Internet</h1>
-            
+          <div class="banner slant" id="smbanner2">
+            <div class="banner_text_wrap">
+              <p class="background_banner">Wear the Internet</p>
+              <p class="foreground_banner">Wear the Internet</p>
+            </div>
           </div>
-
-          <div class="selection_banner" id="project1" sm-banner-id="smbanner1" lg-banner-id="lgbanner1">
-          </div>
-          
-          </div>
+          <div
+            class="selection_banner"
+            id="project2"
+            sm-banner-id="smbanner2"
+            lg-banner-id="lgbanner2"
+          ></div>
         </div>
       </div>
 
-      <div class="card col-lg-6 m-3">Pet Rainbow</div>
-      <div class="card col-lg-6 m-3">Data Science</div>
-      <div class="card col-lg-6 m-3">INTRO</div>
-    
+
+
+      
+    </div>
+
+    <div class="card col-lg-6 m-3">Pet Rainbow</div>
+    <div class="card col-lg-6 m-3">Data Science</div>
+    <div class="card col-lg-6 m-3">INTRO</div>
 
     <footer class="m_footer">
       <h4>Want to build something awesome?</h4>
@@ -108,46 +174,43 @@
     <script src="js/animation.js"></script>
     <!-- jquery practice and librayr -->
     <script>
+      $(function () {
+        $(".selection_banner").on("mouseover", function () {
+          var smID = $(this).attr("sm-banner-id");
+          var lgID = $(this).attr("lg-banner-id");
 
-      $(function(){
+          $("#" + smID).animate(
+            {
+              width: "toggle",
+            },
+            90
+          );
 
+          $("#" + lgID).animate(
+            {
+              opacity: 1,
+            },
+            90
+          );
+        });
+        $(".selection_banner").on("mouseleave", function () {
+          var smID = $(this).attr("sm-banner-id");
+          var lgID = $(this).attr("lg-banner-id");
 
-        $('.selection_banner').on('mouseover', function() {
-            var smID = $(this).attr('sm-banner-id')
-            var lgID = $(this).attr('lg-banner-id')
-        
-           $('#'+smID).slideToggle(100)
-            $('#'+lgID).animate({
-              opacity:1
-            },100)
-
-          }
-
-          )
-          $('.selection_banner').on('mouseleave', function() {
-            var smID = $(this).attr('sm-banner-id')
-            var lgID = $(this).attr('lg-banner-id')
-        
-           $('#'+smID).slideToggle(100)
-            $('#'+lgID).animate({
-              opacity:0
-            },100)
-
-          }
-
-          )
-
-
-        
-          
-          
-
-          
-          
-          
-         } );
-
-
+          $("#" + smID).animate(
+            {
+              width: "toggle",
+            },
+            90
+          );
+          $("#" + lgID).animate(
+            {
+              opacity: 0,
+            },
+            90
+          );
+        });
+      });
     </script>
   </body>
 </html>

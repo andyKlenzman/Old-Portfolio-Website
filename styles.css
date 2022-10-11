@@ -9,6 +9,43 @@
   margin: none;
   text-transform: uppercase;
   z-index: 5; }
+  .m_header_font:hover {
+    text-decoration: none;
+    font-weight: medium;
+    color: #E854E6;
+    font-size: 1.2rem;
+    margin: none;
+    text-transform: uppercase;
+    z-index: 5; }
+  .wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+  }
+
+
+
+  .main_foreground_banner {
+    position: relative;
+    z-index: 4;
+    opacity: 1;
+    color: white;
+    
+  }
+  
+  .main_background_banner {
+    padding: 0px;
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+    color: #E854E6;
+    width: 100%;
+    left: -3px;
+    top: 3px;
+  }
+
+  
 
 .m_header_container {
   padding-top: 5px;
@@ -27,30 +64,28 @@
   border: white solid 2px;
   width: 150px;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 15px;
   align-self: center;
   background-color: transparent;
   
 }
 
-.m_main_button:hover {
 
-
-  width: 150px;
-  text-align: center;
+.m_main_button_text { 
   margin-top: 10px;
-  align-self: center;
-
-  
 }
+
+
 
 .banner {
   background-color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
+  padding: none;
   position: absolute;
-  width: 100%;
-  bottom: 0;
-  margin-bottom: 40px;
+  width: 90%;
+  bottom: 10%;
+  overflow: hidden;
+  height:45px
   /* transition: transform  .5s ease-in-out; */
 
 }
@@ -59,14 +94,29 @@
   background-color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   position: absolute;
-  width: 100%;
   bottom: 0;
   margin-bottom: 40px;
+  
   /* transition: transform  .5s ease-in-out; */
 
   
   
 
+}
+
+
+.slant {
+    clip-path: polygon(0 0,100% 0,95% 100%,0 100%);
+}
+
+.banner_text_wrap{
+  /* margin-top: 10px; */
+  margin: none;
+  padding: none;
+  position: relative;
+  margin-left: 15px;
+  font-size: 30px;
+  
 }
 
 .selection_banner {
@@ -80,7 +130,8 @@
   z-index: 4;
   margin-left: 2px;  
   color: white;
-
+  padding: 0px;
+  margin-bottom: none;
   
 }
 
@@ -93,7 +144,8 @@
   /* padding: 5px; */
   opacity: 1;
   color: #E854E6;
-  
+  margin-bottom: none;
+
  
 }
 
@@ -157,11 +209,30 @@ certain parts of the project */
   width: 100%;
   top:-2;
   left: -3px;
-  
-  
- 
 }
 
+.description_title_wrapper{
+  font-size: 36px;
+  margin: none;
+  padding: none;
+}
+.wrapper_subtitle{
+  margin: none;
+  padding: none;
+  font-size: 24px;
+}
+
+.wrapper_plus {
+  font-size: 70px;
+  margin: none;
+  padding: none;
+
+}
+
+/* good progress here, next up is working on the lg banner font it will nr good to learn good naming conventions, i wish I would have used secondary annd primary for the namee =, but ho knows, i like the keyboard quite a bit though my wrists still are a little sore we will see how it goes. remember the peace you cn have while doing tthese things.... it's okay tol keep work unfinished */
+.lg_text_banner{
+  margin-top: 10%;
+}
 
 
 
@@ -184,10 +255,6 @@ left: -2px; */
 }
 
 
-.m_main_button_text { 
-  margin-top: 1px;
-  position: absolute;
-}
 
 .m_portfolio {
   background-color: rgb(228, 35, 35);
@@ -195,7 +262,7 @@ left: -2px; */
 }
 
 .m_landing_page {
-  height: 700px;
+  height: 100vh;
   background-color: #1C1C1C;
   display: flex;
   flex-direction: column;
