@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- gitignore has node modules missing....will that be a prob during deplay? -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andy Klenzman | Full Stack Web Developer</title>
+    <link
+      rel="stylesheet"
+      href="/Portfolio_Project/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="/Portfolio_Project/node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Portfolio_Project/projectstyles.css"/>
+  </head>
+
+  <!-- make the viewport height the height og the landing page container -->
+
+  <body class="">
+    <!-- what if I animated the dash to become an underline????? -->
+    <!-- model the color scheme after linkedTree, use black and white for first intro section, and for each project, add a special section -->
+    <!-- add a blur to the header -->
+
+    <header class="m_header_container navbar">
+      <a class="m_header_font" href="/Portfolio_Project/index.html">HOME /</a>
+      <a class="m_header_font" href="#anchor-name">PORTFOLIO /</a>
+      <a class="m_header_font">TIMELINE /</a>
+      <a class="m_header_font">CONTACT</a>
+      <!-- <a class="m_header_font">/</a>
+      <a class="m_header_font"></a> -->
+    </header>
+
+    <!-- MENU -->
+    <div class="m_landing_page">
+      <!-- <pre id="grid"> -->
+            
+      <div class="main_content_wrapper">
+        
+        <div class="wrapper">
+          <h1 class="main_background_banner">T share</h1>
+          <h1 class="main_foreground_banner">T share</h1>
+        </div>
+          <h2 class="main_foreground_banner">Wear the Internet</h2>
+        
+          
+       
+
+      </div>
+      <a href="https://www.tshare.family/">
+      <button class="m_main_button" >
+        <h6 class="m_main_button_text">VIEW PROJECT</h6>
+      </button>
+        </a>
+
+      <!-- </pre> -->
+    </div>
+    <div class="container biocontainer">
+        <div class="tech_icons">TECH USED</div>
+        <div>
+            <img>
+            <div>images</div>
+            <p>
+            ipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu gnreiuwngiurnewiugnriuewniugnriuew iguweru guirew iugrewiu giurnewniu greiuw giure w iugripuew gipsunu gurewuignreiuwn giurewniu 
+            </p>
+        </div>
+      
+      
+    </div>
+    <div>
+        <div>Previous Project</div>
+        <div>Next Project</div>
+    </div>
+    
+    
+    
+
+    <footer class="m_footer">
+      <h4>Want to build something awesome?</h4>
+      <h5><i class="fa fa-envelope"></i> andyklenz@gmail.com</h5>
+    </footer>
+
+    <script src="/Portfolio_Project/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/Portfolio_Project/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/Portfolio_Project/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/Portfolio_Project/js/animation_clean.js"></script>
+    <!-- jquery practice and librayr -->
+    <script>
+      $(function () {
+        $(".selection_banner").on("mouseover", function () {
+          var smID = $(this).attr("sm-banner-id");
+          var lgID = $(this).attr("lg-banner-id");
+
+          $("#" + smID).animate(
+            {
+              width: "toggle",
+            },
+            90
+          );
+
+          $("#" + lgID).animate(
+            {
+              opacity: 1,
+            },
+            90
+          );
+        });
+        $(".selection_banner").on("mouseleave", function () {
+          var smID = $(this).attr("sm-banner-id");
+          var lgID = $(this).attr("lg-banner-id");
+
+          $("#" + smID).animate(
+            {
+              width: "toggle",
+            },
+            90
+          );
+          $("#" + lgID).animate(
+            {
+              opacity: 0,
+            },
+            90
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

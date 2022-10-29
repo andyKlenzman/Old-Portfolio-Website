@@ -1,0 +1,347 @@
+* {
+    font-family: "Roboto", sans-serif; }
+  
+  .m_header_font {
+    text-decoration: none;
+    font-weight: medium;
+    color: #E854E6;
+    font-size: 1.2rem;
+    margin: none;
+    text-transform: uppercase;
+    z-index: 5; }
+    .m_header_font:hover {
+      text-decoration: none;
+      font-weight: medium;
+      color: #E854E6;
+      font-size: 1.2rem;
+      margin: none;
+      text-transform: uppercase;
+      z-index: 5; }
+    .wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: fit-content;
+    }
+  
+    
+  
+    .main_foreground_banner {
+      position: relative;
+      z-index: 42;
+      opacity: 1;
+      color: white;
+      
+    }
+    
+    .main_background_banner {
+      padding: 0px;
+      position: absolute;
+      z-index: 4;
+      opacity: 1;
+      color: #E854E6;
+      width: 100%;
+      left: -4px;
+      top: 4px;
+    }
+  
+    
+  
+  .m_header_container {
+    padding-top: 5px;
+    padding-left: 5px;
+    background-color: #1C1C1C;
+    position: fixed;
+    z-index: 200; 
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .m_main_button {
+    height: 50px;
+    color:white;
+    width: 150px;
+    border: none;
+    text-align: center;
+    margin-top: 15px;
+    align-self: center;
+    background-color: transparent;
+    z-index: 10000;
+    background-color: #E854E6;
+    
+  }
+  
+  .m_main_button:hover {
+    
+    background-color: #e471e2;
+    border: none;
+    
+  }
+  
+  
+  .m_main_button_text { 
+    margin-top: 10px;
+  }
+  
+  
+  
+  .banner {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    padding: none;
+    position: absolute;
+    width: 90%;
+    bottom: 10%;
+    overflow: hidden;
+    height:45px
+    /* transition: transform  .5s ease-in-out; */
+  
+  }
+  
+  .banner:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
+    
+    /* transition: transform  .5s ease-in-out; */
+  
+    
+    
+  
+  }
+  
+  
+  .slant {
+      clip-path: polygon(0 0,100% 0,95% 100%,0 100%);
+  }
+  
+  .banner_text_wrap{
+    /* margin-top: 10px; */
+    margin: none;
+    padding: none;
+    position: relative;
+    margin-left: 15px;
+    font-size: 30px;
+    
+  }
+  
+  .selection_banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 6;}
+  
+  .foreground_banner {
+    position: relative;
+    z-index: 4;
+    color: white;
+    padding: 0px;
+    margin-bottom: none;
+    
+  }
+  
+  .background_banner {
+    padding: 0px;
+    position: absolute;
+    z-index: 4;
+    display: inline-block;
+  
+    /* padding: 5px; */
+    opacity: 1;
+    color: #E854E6;
+    margin-bottom: none;
+    top:2px;
+    left:-2px;
+  
+   
+  }
+  
+  
+  /* LG banner*/
+  /* cursor: pointer; */
+  /* hmm it hovers but only for 
+  certain parts of the project */
+  
+  
+  @keyframes slide-right {
+    from {
+      transform: translateX(-100%); 
+      /* width: 100%;  */
+     
+    }
+  
+    to {
+      transform: translateX(0%); 
+      /* width: 0%; */
+     
+    }
+  }
+  
+  
+  .lg_banner {
+    background-color: rgba(0, 0, 0, 0.562);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .lg_banner:hover {
+    opacity: 1;
+  }
+  
+  .lg_foreground_banner {
+    position: relative;
+    z-index: 4;
+    opacity: 1;
+    color: white;
+    margin:none;
+    
+  }
+  
+  .lg_background_banner {
+    padding: 0px;
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+    color: #E854E6;
+    width: 100%;
+    top:-2;
+    left: -3px;
+    margin: none;
+  }
+  
+  
+  
+  .description_title_wrapper{
+    font-size: 36px;
+    margin: none;
+    padding: none;
+    height: 50px;
+  }
+  .wrapper_subtitle{
+    margin: none;
+    padding: none;
+    font-size: 24px;
+    height:min-content;
+    position: relative;
+    height:30px;
+  }
+  
+  .wrapper_plus {
+    font-size: 70px;
+    margin: none;
+    padding: none;
+    height:30px;
+  
+  
+  }
+  
+  /* good progress here, next up is working on the lg banner font it will nr good to learn good naming conventions, i wish I would have used secondary annd primary for the namee =, but ho knows, i like the keyboard quite a bit though my wrists still are a little sore we will see how it goes. remember the peace you cn have while doing tthese things.... it's okay tol keep work unfinished */
+  .lg_text_banner{
+    margin-top: 10%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* bottom: -2px;
+  left: -2px; */
+  
+  .relative {
+    position: relative;
+  }
+  .m_portfolio_image{
+    color: #FFF;
+    position: relative;
+  
+  }
+  
+  
+  
+  .m_portfolio {
+    background-color: rgb(228, 35, 35);
+  
+  }
+  
+  .m_landing_page {
+    height: 400px;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #E854E6;
+    text-transform: uppercase; 
+  }
+    .m_landing_page h1 {
+      font-size: 5rem; }
+  
+  
+  
+  
+  
+    .m_footer{
+  
+    height: 400px;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #E854E6;
+    text-transform: uppercase; 
+    margin-top: 40px;
+  
+    }
+  
+  
+    .container {
+      background-color: white;
+      
+    }
+  
+  .canvas_wrapper {
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .biocontainer {
+    height: 400px;
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+  
+  
+  
+  .biopicture {
+    border-radius: 50%;
+    align-self: center;
+  }
+  .biopicturewrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    margin-top: 20px;
+    
+  }
+
+  
+  

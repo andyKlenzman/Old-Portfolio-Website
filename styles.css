@@ -24,11 +24,11 @@
     height: fit-content;
   }
 
-
+  
 
   .main_foreground_banner {
     position: relative;
-    z-index: 4;
+    z-index: 42;
     opacity: 1;
     color: white;
     
@@ -41,8 +41,8 @@
     opacity: 1;
     color: #E854E6;
     width: 100%;
-    left: -3px;
-    top: 3px;
+    left: -4px;
+    top: 4px;
   }
 
   
@@ -52,7 +52,7 @@
   padding-left: 5px;
   background-color: #1C1C1C;
   position: fixed;
-  z-index: 2; 
+  z-index: 200; 
   width: 100%;
   display: inline-block;
   text-align: left;
@@ -67,6 +67,14 @@
   margin-top: 15px;
   align-self: center;
   background-color: transparent;
+  z-index: 10000;
+  
+}
+
+.m_main_button:hover {
+  
+  background-color: #E854E6;
+  border: none;
   
 }
 
@@ -128,7 +136,6 @@
 .foreground_banner {
   position: relative;
   z-index: 4;
-  margin-left: 2px;  
   color: white;
   padding: 0px;
   margin-bottom: none;
@@ -145,6 +152,8 @@
   opacity: 1;
   color: #E854E6;
   margin-bottom: none;
+  top:2px;
+  left:-2px;
 
  
 }
@@ -172,7 +181,7 @@ certain parts of the project */
 
 
 .lg_banner {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.562);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -197,6 +206,7 @@ certain parts of the project */
   z-index: 4;
   opacity: 1;
   color: white;
+  margin:none;
   
 }
 
@@ -209,23 +219,32 @@ certain parts of the project */
   width: 100%;
   top:-2;
   left: -3px;
+  margin: none;
 }
+
+
 
 .description_title_wrapper{
   font-size: 36px;
   margin: none;
   padding: none;
+  height: 50px;
 }
 .wrapper_subtitle{
   margin: none;
   padding: none;
   font-size: 24px;
+  height:min-content;
+  position: relative;
+  height:30px;
 }
 
 .wrapper_plus {
   font-size: 70px;
   margin: none;
   padding: none;
+  height:30px;
+
 
 }
 
@@ -290,6 +309,7 @@ left: -2px; */
   text-align: center;
   color: #E854E6;
   text-transform: uppercase; 
+  margin-top: 40px;
 
   }
 
@@ -299,106 +319,43 @@ left: -2px; */
     
   }
 
-/* MOVING SCANLINE SETTINGS */
-/* MIXINS */
-/* CSS .scanlines CLASS */
-.scanlines {
-  position: relative;
-  overflow: hidden; }
-  .scanlines:before, .scanlines:after {
-    display: block;
-    pointer-events: none;
-    content: '';
-    position: absolute; }
-  .scanlines:before {
-    width: 100%;
-    height: 2px;
-    z-index: 3;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0.75;
-    animation: scanline 6s linear infinite; }
-  .scanlines:after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
-    background-size: 100% 4px;
-    animation: scanlines 1s steps(60) infinite; }
-
-/* ANIMATE UNIQUE SCANLINE */
-@keyframes scanline {
-  0% {
-    transform: translate3d(0, 200000%, 0);
-    bottom: 0%; } }
-
-@keyframes scanlines {
-  0% {
-    background-position: 0 50%;
-    bottom: 0%; } }
-
-/* PRESENTATION STUFF */
-.jpg {
-  background: url("https://images.eurogamer.net/articles//a/6/4/8/8/1/7/PC_003.jpg.jpg.jpg") no-repeat;
-  background-size: cover; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  div#grid-container {
-    margin: 3px;
-    height: calc(100vh - 6px);
-    width: calc(100vw - 6px);
-    display: table;
-    background: #222;
-}
-
-div#grid-bg {
-  display: block;
+.canvas_wrapper {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  mix-blend-mode: multiply;
+  z-index: 0;
+
+}
+
+.biocontainer {
+  
+  padding-top: 60px;
+  margin-bottom: 40px;
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-    box-sizing: border-box;
-    margin: 0;
-    background: #222;
+.biopicture {
+  border-radius: 50%;
+  align-self: center;
 }
 
-
-pre#grid {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    font-size: 8px;
-    font-family: 'Press Start 2P';
-    display: table-cell;
-    color: #FFF;
-    position: relative;
-    background: #000;
-    mix-blend-mode: lighten;
+@media (max-width: 992px) {
+  .biopicture {
+    margin-bottom: 40px;
+    height: 250px;
+  }
 }
+
+.biopicturewrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 20px;
+  
+}
+
+.tech_icons {
+  align-self: center;
+}
+
